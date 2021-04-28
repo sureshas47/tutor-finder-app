@@ -1,0 +1,17 @@
+.body {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.navbar-brand {
+    margin-right: 100px;
+}
+
+#user {
+    position: absolute;
+    right: 25px;
+}
+
+#btnTutor{
+    margin-right: 85px;
+}

@@ -1,0 +1,51 @@
+*{margin: 0; padding:0;}
+.signup-area{
+     border: 1px solid white;
+    /*width: 100%;*/
+    align-items: center;
+    padding: 10px;
+
+ }
+
+.c-password{
+    padding-left: 10px;
+
+}
+.fullName{
+    padding-left: 10px;
+}
+.userType {
+    font-size:12px;
+    padding-left:10px;
+
+}
+.userType input{
+    margin: 10px;
+    display: block;
+}
+
+.signup{
+    padding-left: 10px;
+}
+
+.signup button{
+    background-color: #141618;
+    color: white;
+    cursor: pointer;
+}
+.signup button:hover{
+    background-color: #2ac9d7;
+}
+.login-link a{
+   color: #77abc2;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.login-link a:hover{
+    color: #022b2d;
+    background-color: #d95b30;
+
+}
+
+
+

@@ -1,0 +1,70 @@
+*{margin: 0; padding:0;}
+
+.login-area{
+  border: 1q solid #232121;
+}
+.login-area label{
+    font-size: 16px;
+}
+
+.email{
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+}
+
+.password{
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+}
+.submit{
+    font-size: 18px;
+    background-color: #282b28;
+    color: white;
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.btnSubmit{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.btnSubmit button{
+    cursor: pointer;
+}
+
+.btnSubmit button:hover{
+    background-color: #2ac9d7;
+}
+
+.btnSubmit a{
+    color: #f38c6c;
+    font-size: 18px;
+
+}
+
+.btnSubmit a:hover{
+    color: #8d590b;
+}
+.header img{
+    height:100px;
+    width: 100px;
+}
+.header h2{
+    font-size: 18px;
+    padding-left: 10px;
+    color: #047f7f;
+}
+
+.header{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+
+}
+
