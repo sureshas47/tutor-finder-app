@@ -5,10 +5,15 @@ import SignupForm from "../Authentication/Signup/Signup";
 import UserProfileList from "../Authentication/Signup/UserProfileList";
 import StudentProfile from "../Profile/Student/StudentProfile";
 import TeacherProfile from "../Profile/Teacher/TeacherProfile";
+import Navbar from "../layouts/Navbar";
+import "../Default/default.css";
+import Footer from "../layouts/Footer";
 const Routes = () => {
     return (
-
+       <div>
+        <Navbar/>
             <Switch>
+
                 <Route exact path="/" component={LoginForm}/>
                 <Route path="/signup" component={SignupForm}/>
                 <Route path="/userlist" component={UserProfileList}/>
@@ -16,6 +21,8 @@ const Routes = () => {
                 <Route path="/teacher-profile" component={TeacherProfile}/>
 
             </Switch>
+           <Footer/>
+       </div>
 
     )
 }

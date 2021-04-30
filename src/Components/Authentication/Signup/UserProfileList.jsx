@@ -27,7 +27,7 @@ const UserProfileList=()=>{
                     data.map((curVal) =>
                             <div className="show-email">
                                 <p>{curVal.fullName}</p>
-                                <p>{curVal.email}</p>
+                                <p>{curVal.pic}</p>
                             </div>
                     )
                 }

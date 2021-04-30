@@ -2,69 +2,47 @@
 
 .login-area{
   border: 1q solid #232121;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #474747;
+    color: #f3f0f0;
+
+}
+.login-area input{
+    margin-bottom: 5px;
 }
 .login-area label{
     font-size: 16px;
-}
 
-.email{
-    padding: 10px;
-    justify-content: space-around;
-    display: flex;
-}
-
-.password{
-    padding: 10px;
-    justify-content: space-around;
-    display: flex;
 }
 .submit{
+    margin-top:10px;
     font-size: 18px;
-    background-color: #282b28;
+    width: 170px;
+    background-color:#d95b30;
     color: white;
-    display: block;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.btnSubmit{
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
     cursor: pointer;
+    border: #ffffff
 }
-.btnSubmit button{
-    cursor: pointer;
+.submit:hover{
+    background-color: #1E90FFFF;
 }
-
-.btnSubmit button:hover{
-    background-color: #2ac9d7;
+.login-area a{
+    color: #77abc2;
+    margin-top: 10px;
 }
-
-.btnSubmit a{
-    color: #f38c6c;
-    font-size: 18px;
-
-}
-
-.btnSubmit a:hover{
-    color: #8d590b;
+.login-area a:hover{
+    color: #1E90FFFF;
 }
 .header img{
     height:100px;
     width: 100px;
 }
-.header h2{
-    font-size: 18px;
-    padding-left: 10px;
-    color: #047f7f;
-}
 
 .header{
     align-items: center;
-    justify-content: space-around;
-    display: flex;
-
 }
 

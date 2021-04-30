@@ -3,19 +3,13 @@ import './default.css'
 import Navbar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
 
-const Default = () => {
-    return (
+const Default=()=>{
+    return(
         <>
-            {/*This is Navbar Component*/}
-            <Navbar/>
+        <div className="container">
 
-            {/*This is Body Component*/}
-            <div className="body">
 
-            </div>
-
-            {/*This is Footer Component*/}
-            <Footer/>
+        </div>
         </>
     )
 }

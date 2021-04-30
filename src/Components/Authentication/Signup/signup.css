@@ -1,51 +1,47 @@
 *{margin: 0; padding:0;}
+.header{
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    justify-content: space-between;
+    display: grid;
+    background-color: #ecf0f3;
+    color: #6d6d6d;
+}
+
 .signup-area{
-     border: 1px solid white;
-    /*width: 100%;*/
     align-items: center;
-    padding: 10px;
-
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #474747;
+    color: #f3f0f0;
  }
-
-.c-password{
-    padding-left: 10px;
-
-}
-.fullName{
-    padding-left: 10px;
-}
-.userType {
-    font-size:12px;
-    padding-left:10px;
-
-}
-.userType input{
-    margin: 10px;
-    display: block;
+.signup-area input{
+    margin-bottom: 10px;
 }
 
-.signup{
-    padding-left: 10px;
-}
-
-.signup button{
-    background-color: #141618;
+.signup-area button{
+    font-size: 18px;
+    width: 170px;
+    background-color: #137474;
     color: white;
     cursor: pointer;
+    border: #ffffff;
+    margin-top: 10px;
 }
-.signup button:hover{
-    background-color: #2ac9d7;
+.signup-area button:hover{
+    background-color: #1E90FFFF;
+
 }
-.login-link a{
+.signup-area a{
    color: #77abc2;
-    font-size: 12px;
-    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
 }
-.login-link a:hover{
-    color: #022b2d;
-    background-color: #d95b30;
+.signup-area a:hover{
+    color: #1E90FFFF;
 
 }
-
-
-

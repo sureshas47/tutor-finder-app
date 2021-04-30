@@ -1,0 +1,50 @@
+
+*{margin: 0; padding:0}
+.main-header{
+    color: #047f7f;
+    text-align: center;
+    padding-top: 15px;
+    opacity: 70%;
+}
+.main-header h2{
+    color: #d95b30;
+}
+.header p{
+    padding-left: 5%;
+    line-height: 2;
+}
+.header img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+.header span{
+    color: #047f7f;
+}
+
+.teacher-Profile{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.teacher-Profile input{
+    margin-bottom: 10px;
+}
+.teacher-Profile .file{
+    font-size: 12px;
+    padding-left: 6%;
+
+}
+.teacher-Profile button{
+    font-size: 18px;
+    width: 170px;
+    background-color:#d95b30;
+    color: white;
+    cursor: pointer;
+    border: #ffffff
+}
+.teacher-Profile button:hover{
+    background-color: #1E90FFFF;
+}

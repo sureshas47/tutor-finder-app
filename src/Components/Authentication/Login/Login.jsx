@@ -31,30 +31,25 @@ const LoginForm = () => {
         <>
             <div className="header">
                 <img src={img} alt=""/>
-                <h2>Tutor Finder Login Area</h2>
+                <h1>Tutor Finder Login Area</h1>
             </div>
-            <br/><br/><br/><br/>
-            <div className="login-area">
-                <form onSubmit={handleSubmit} action="">
-                    <div className="email">
+
+            <div className="loginArea">
+                <form className="login-area" onSubmit={handleSubmit} action="">
                         <label htmlFor="email">Email</label>
                         <input type="email" name="email" id="email" autoComplete="off"
                                value={email} required
                                onChange={(e) => setEmail(e.target.value)}
                         />
-                    </div>
-                    <div className="password">
+
                         <label htmlFor="password">Password</label>
                         <input type="password" name="password" id="psw" autoComplete="off"
                                value={password} required
                                onChange={(e) => setPassword(e.target.value)}
                         />
-                    </div>
-                    <div className="btnSubmit">
                         <button name="submit" type="submit" className="submit">Login</button>
                         <Link to="signup">Signup</Link>
 
-                    </div>
                 </form>
                 <div>
                     {/*{*/}
