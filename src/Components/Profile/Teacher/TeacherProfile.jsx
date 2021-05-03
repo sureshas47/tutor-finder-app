@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useState} from "react";
 import timg from "../../Images/teacher.jpeg";
-import firebase from "firebase";
 import "./teacherProfile.css";
+import firebase from "firebase";
+import app from "firebase";
+
 
 const TeacherProfile = () => {
     const [address, setAddress] = useState("")
@@ -13,7 +15,16 @@ const TeacherProfile = () => {
     const [fees, setFees] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    const [pic, setPic] = useState("");
+    const [file, setFile] = useState(null);
+
+    //  const onChange= async (e)=>{
+    //      const file=e.target.files[0]
+    //      console.log(file);
+    //      const storageRef=app.storage().ref("images");
+    //      const fileRef=storageRef.child(file.name)
+    //      await fileRef.put(file);
+    //  }
+
 
     const handleTeacherProfile = e => {
         e.preventDefault();
@@ -27,24 +38,19 @@ const TeacherProfile = () => {
             fees: fees,
             subject: subject,
             message: message,
-            pic: pic
         }).then(function (response) {
             alert("teacher register successful");
         }).catch(function (error) {
             alert("failed to register ! please try again");
         });
+        //uploading image to firebase
+        const storageRef = app.storage().ref("images");
+        const fileRef = storageRef.child(file.name)
+        fileRef.put(file);
     };
-
-    // const handleChange=(e)=>{
-    //     if (e.target.files){
-    //         setPic(e.target.files)
-    //     }
-    // }
-
 
     return (
         <>
-            <>
                 <div className="main-header">
                     <h1>Searching A New <h2>Teaching Job !</h2></h1>
                 </div>
@@ -68,7 +74,6 @@ const TeacherProfile = () => {
 
                 <div className="teacherProfile">
                     <form className="teacher-Profile" action="" onSubmit={handleTeacherProfile}>
-
                         <input type="text" name="address" id="address" autoComplete="off" value={address}
                                placeholder="enter address" onChange={(e) =>
                             setAddress(e.target.value)} required/>
@@ -103,14 +108,12 @@ const TeacherProfile = () => {
                                placeholder="enter message" required/>
 
                         <input className="file" type="file" name="profile-pic" id="profile-pic" autoComplete="off"
-                               value={pic}
-                               onChange={(e) => setPic(e.target.files[0])}
+                               onChange={(e) => setFile(e.target.files[0])}
                                placeholder="choose profile picture" required/>
 
                         <button name="save" type="submit">Save Profile</button>
                     </form>
                 </div>
-            </>
         </>
     )
 }

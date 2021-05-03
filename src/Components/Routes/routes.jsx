@@ -6,7 +6,7 @@ import UserProfileList from "../Authentication/Signup/UserProfileList";
 import StudentProfile from "../Profile/Student/StudentProfile";
 import TeacherProfile from "../Profile/Teacher/TeacherProfile";
 import Navbar from "../layouts/Navbar";
-import "../Default/default.css";
+import Default from "../Default/Default";
 import Footer from "../layouts/Footer";
 const Routes = () => {
     return (
@@ -19,6 +19,7 @@ const Routes = () => {
                 <Route path="/userlist" component={UserProfileList}/>
                 <Route path="/student-profile" component={StudentProfile}/>
                 <Route path="/teacher-profile" component={TeacherProfile}/>
+                <Route path="/default" component={Default}/>
 
             </Switch>
            <Footer/>

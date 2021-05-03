@@ -17,7 +17,7 @@ const SignupForm = () => {
     //create user for authentication with email and password
     useEffect(() => {
         return () => {
-            fireAuth.auth().createUserWithEmailAndPassword(email, password)
+            firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then((response) => {
                     return response;
                 }).catch((error) => {
@@ -39,11 +39,12 @@ const SignupForm = () => {
                 userType: userType
             }).then(function (response) {
                 alert("register successful");
+                window.location="/";
             }).catch(function (error) {
                 alert("failed to register ! please try again");
             });
         } else {
-            prompt("password didnot matched");
+            alert("password did not matched");
         }
     };
 

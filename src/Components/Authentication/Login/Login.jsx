@@ -19,8 +19,9 @@ const LoginForm = () => {
         event.preventDefault();
         const newEntry = {email: email, password: password}
         setAllEntry(...allEntry, [newEntry])
-        fireAuth.auth().signInWithEmailAndPassword(email, password).then(() => {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
             alert("successful login from: " + email);
+            window.location = "./Default";
         }).catch((error) => {
             alert("failed", error);
         })

@@ -1,5 +1,6 @@
     import firebase from "firebase";
     import React from "react";
+    import "firebase/storage";
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
@@ -16,7 +17,8 @@
     };
 
     // Initialize Firebase
-
-    const fireAuth = firebase.initializeApp(firebaseConfig);
-
-    export default fireAuth;
+    // const fireAuth = firebase.initializeApp(firebaseConfig);
+    const app=firebase.initializeApp(firebaseConfig);
+    // const storage=firebase.storage();
+    // export { storage, firebase as default};
+    export default app;

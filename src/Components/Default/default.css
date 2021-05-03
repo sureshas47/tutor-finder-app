@@ -15,3 +15,62 @@
 #btnTutor{
     margin-right: 85px;
 }
+
+/*....................*/
+.header{
+    margin-top: 15px;
+    justify-content: space-evenly;
+
+}
+#images img {
+    width: 200px;
+    height: 200px;
+    margin:10px 10px 20px 10px;
+}
+
+#title{
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    margin-left: 3%;
+    text-align: center;
+    line-height: 2;
+
+}
+
+
+@media (max-width: 990px) {
+    #viewwork h1{
+        padding-top: 60%;
+    }
+    #myWork
+    {
+        top: 160%;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+    }
+
+}
+@media (max-width: 850px) {
+    #viewwork h1{
+        padding-top: 90%;
+    }
+    #myWork
+    {
+        top: 190%;
+    }
+}
+
+@media (max-width: 768px) {
+    #viewwork h1{
+        padding-top: 100%;
+    }
+    #myWork
+    {
+        top: 200%;
+        grid-template-columns: auto;
+    }
+}
+
+

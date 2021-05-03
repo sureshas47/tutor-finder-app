@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-                <a className="navbar-brand" href="/home">Tutor Finder App</a>
+                <Link className="navbar-brand" to="/default">Tutor Finder App</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <Link  className="nav-link" to="#">Home <span className="sr-only">(current)</span></Link>
+                            <Link  className="nav-link" to="/default">Home <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item active">
                             <Link className="nav-link" to="student-profile">Find Tutors<span className="sr-only">(current)</span></Link>
