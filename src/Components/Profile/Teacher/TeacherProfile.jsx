@@ -45,8 +45,8 @@ const TeacherProfile = () => {
         });
         //uploading image to firebase
         const storageRef = app.storage().ref("images");
-        const fileRef = storageRef.child(file.name)
-        fileRef.put(file);
+        const fileRef = storageRef.child(file.name).put(file);
+        // fileRef.put(file);
     };
 
     return (
