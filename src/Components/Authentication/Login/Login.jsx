@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import {Link, Route} from "react-router-dom";
 import "./login.css";
-import fireAuth from "./FirebaseAuth";
+// import fireAuth from "./FirebaseAuth";
 import img from "../../Images/loginimg.webp";
 import "firebase/firestore";
 import firebase from "firebase";
+import apps from "firebase";
 // import SignupForm from "../Signup/Signup";
 
 
@@ -19,7 +20,7 @@ const LoginForm = () => {
         event.preventDefault();
         const newEntry = {email: email, password: password}
         setAllEntry(...allEntry, [newEntry])
-        firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
+        apps.auth().signInWithEmailAndPassword(email, password).then(() => {
             alert("successful login from: " + email);
             window.location = "./Default";
         }).catch((error) => {

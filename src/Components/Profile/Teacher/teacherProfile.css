@@ -5,6 +5,7 @@
     text-align: center;
     padding-top: 15px;
     opacity: 70%;
+
 }
 .main-header h2{
     color: #d95b30;
@@ -12,6 +13,7 @@
 .header p{
     padding-left: 5%;
     line-height: 2;
+    font-family: 'Inconsolata', monospace;
 }
 .header img{
     border-radius: 50%;
