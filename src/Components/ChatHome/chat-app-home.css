@@ -1,0 +1,33 @@
+/*.main-header {*/
+/*    margin: 20px;*/
+/*}*/
+.card{
+    padding: 20px;
+    color: #d95b30;
+}
+
+.card img{
+height: 300px;
+}
+.card .buttons{
+    display: flex;
+}
+.card .btn-login{
+    margin-left: 20px;
+}
+.card h1{
+    color: #047f7f;
+}
+.registered-email{
+    color: green;
+    margin:20px;
+    text-align: left;
+}
+.chat-list{
+    color: #d95b30;
+}
+.listItem{
+    cursor: pointer;
+}
+
+

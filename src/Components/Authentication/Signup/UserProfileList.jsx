@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from "react";
-import firebase from "firebase";
+// import {useHistory} from "react-router-dom";
+
 import app from "firebase";
 
 
 const UserProfileList = () => {
+
     const [data, setData] = useState();
     // const[image,setImage]=useState([]);
     const [loading, setLoading] = useState(true);
-
     //getting all data from firestore
     const getUserListFromFirebase = async () => {
         const snapshot = await app.firestore().collection('tutorFinderApp').get();
@@ -19,6 +20,7 @@ const UserProfileList = () => {
             setLoading(false);
         });
     });
+
 
 
 
@@ -46,6 +48,7 @@ const UserProfileList = () => {
                 {/*            )}*/}
                 {/*</div>*/}
             </div>
+
         </div>
     )
 }

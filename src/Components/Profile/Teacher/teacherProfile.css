@@ -3,8 +3,10 @@
 .main-header{
     color: #047f7f;
     text-align: center;
-    padding-top: 15px;
+    /*padding-top: 15px;*/
     opacity: 70%;
+    font-family: 'Inconsolata', monospace;
+
 
 }
 .main-header h2{

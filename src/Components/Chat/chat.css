@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.chatDetails {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    line-height: initial;
+}
+.chatDetails span{
+    color: orangered;
+}
+.card{
+    padding: 20px;
+}
+.my-msg {
+    padding: 10px;
+    background-color: dodgerblue;
+    margin-left: auto;
+    color: #474747;
+    width: 30%;
+    border-radius: 10px;
+    line-height: initial;
+    margin-top: -16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 85%;
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+.others-msg{
+    /*margin-top: 10px;*/
+    width: 30%;
+    padding: 10px;
+    color: #474747;
+    border-radius: 10px;
+    line-height: initial;
+    background-color: #d95b30;
+    margin-bottom: 10px;
+    margin-top: -16px;
+    font-style: oblique;
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    opacity: 85%;
+    font-weight: bold;
+}
+.my-msg-time{
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 40%;
+    color: #6d6d6d;
+    margin-top: -10px;
+    margin-left: 5px;
+
+
+
+}
+.others-msg-time{
+    font-size: 12px;
+    color: #e2c1c1;
+    margin-top: -10px;
+    margin-left: 5px;
+}
+

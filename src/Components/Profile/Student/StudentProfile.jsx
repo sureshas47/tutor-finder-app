@@ -1,10 +1,12 @@
 import React, {useState} from "react";
+import {useHistory} from "react-router-dom";
 import stdimg from "../../Images/Education.png";
 import "./studentProfile.css";
 import firebase from "firebase";
 
 
 const StudentProfile = () => {
+    const history=useHistory();
     const [address, setAddress] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
     const [city, setCity] = useState("")
@@ -20,6 +22,7 @@ const StudentProfile = () => {
             college:college
         }).then(function (response){
             alert("student register successful");
+            history.push("/chat");
         }).catch(function (error){
             alert("failed to register student ! please try again");
         });

@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "tutor-finder-app-94f4d",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

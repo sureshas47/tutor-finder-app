@@ -1,23 +1,22 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link,useHistory} from "react-router-dom";
 import "./signup.css";
 import img from "../../Images/loginimg.webp";
-import fireAuth from "../Login/FirebaseAuth";
-import "firebase/firestore";
-import firebase from "firebase";
+import app from "../Login/FirebaseAuth";
 
 const SignupForm = () => {
-
+    const history=useHistory();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("");
     const [cpassword, setCpassword] = useState("");
     const [fullName, setFullName] = useState("");
     const [userType, setUserType] = useState("");
 
+
     //create user for authentication with email and password
     useEffect(() => {
         return () => {
-            firebase.auth().createUserWithEmailAndPassword(email, password)
+            app.auth().createUserWithEmailAndPassword(email, password)
                 .then((response) => {
                     return response;
                 }).catch((error) => {
@@ -26,10 +25,11 @@ const SignupForm = () => {
         };
     });
 
+
     const handleSignup = (e) => {
         e.preventDefault();
         //send data to firestore
-        const firestore = firebase.firestore() //making firestore object
+        const firestore = app.firestore() //making firestore object
         if (password === cpassword) {
             firestore.collection("tutorFinderApp").add({
                 email: email,
@@ -39,7 +39,7 @@ const SignupForm = () => {
                 userType: userType
             }).then(function (response) {
                 alert("register successful");
-                window.location="/";
+                history.push("/");
             }).catch(function (error) {
                 alert("failed to register ! please try again");
             });
@@ -47,6 +47,8 @@ const SignupForm = () => {
             alert("password did not matched");
         }
     };
+
+
 
     return (
         <>

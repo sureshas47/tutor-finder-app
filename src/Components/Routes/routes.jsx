@@ -8,6 +8,11 @@ import TeacherProfile from "../Profile/Teacher/TeacherProfile";
 import Navbar from "../layouts/Navbar";
 import Default from "../Default/Default";
 import Footer from "../layouts/Footer";
+import Success from "../Default/PaymentStatus/Success";
+import Failure from "../Default/PaymentStatus/Failure";
+import Chat from "../Chat/Chat";
+import ChatAppHome from "../ChatHome/chat-app-home";
+import payment from "../Default/Payment/Payment";
 const Routes = () => {
     return (
        <div>
@@ -20,6 +25,12 @@ const Routes = () => {
                 <Route path="/student-profile" component={StudentProfile}/>
                 <Route path="/teacher-profile" component={TeacherProfile}/>
                 <Route path="/default" component={Default}/>
+                <Route path="/success" component={Success}/>
+                <Route path="/failure" component={Failure}/>
+                <Route exact path="/chat/:chatId" component={Chat}/>
+                <Route path="/chat-app" component={ChatAppHome}/>
+                <Route path="/pay" component={payment}/>
+
 
             </Switch>
            <Footer/>

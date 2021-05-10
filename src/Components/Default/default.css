@@ -1,6 +1,7 @@
 .body {
     margin-top: 50px;
     margin-bottom: 50px;
+
 }
 
 .navbar-brand {
@@ -12,24 +13,25 @@
     right: 25px;
 }
 
-#btnTutor{
+#btnTutor {
     margin-right: 85px;
 }
 
 /*....................*/
-.header{
+.header {
     margin-top: 15px;
     justify-content: space-evenly;
 
 }
+
 #images img {
     width: 200px;
     height: 200px;
-    margin:10px 10px 20px 10px;
-    box-sizing: border-box;
+    margin: 10px 10px 20px 10px;
+    /*box-sizing: border-box;*/
 }
 
-#title{
+#title {
     letter-spacing: 2px;
     box-sizing: border-box;
     width: 200px;
@@ -40,64 +42,62 @@
 
 }
 
-.academic-course img{
+.academic-course img {
     margin-left: 30%;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.payment img{
+.payment img {
     width: 450px;
     height: 300px;
 }
+
 .payments-online {
-display: flex;
+    display: flex;
     justify-content: space-evenly;
     margin-top: 15px;
-    /*margin-bottom: 15px;*/
-    background-color: #282c34;
-
-
-    /**/
+    background-color: floralwhite;
 }
 
+.payment-method {
+    background-color: floralwhite;
+    max-width: 100%;
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-around;
+}
 
-
-
-
-
-
-
-
-
+/*media query*/
 @media (max-width: 990px) {
-    #viewwork h1{
+    #viewwork h1 {
         padding-top: 60%;
     }
-    #myWork
-    {
+
+    #myWork {
         top: 160%;
         grid-template-columns: auto auto;
         justify-content: space-around;
     }
 
 }
+
 @media (max-width: 850px) {
-    #viewwork h1{
+    #viewwork h1 {
         padding-top: 90%;
     }
-    #myWork
-    {
+
+    #myWork {
         top: 190%;
     }
 }
 
 @media (max-width: 768px) {
-    #viewwork h1{
+    #viewwork h1 {
         padding-top: 100%;
     }
-    #myWork
-    {
+
+    #myWork {
         top: 200%;
         grid-template-columns: auto;
     }

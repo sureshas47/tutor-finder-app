@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.170e1184.chunk.css",
+    "main.js": "/static/js/main.0283ce63.chunk.js",
+    "main.js.map": "/static/js/main.0283ce63.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c62c4c17.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c62c4c17.js.map",
+    "static/js/2.5b254d6a.chunk.js": "/static/js/2.5b254d6a.chunk.js",
+    "static/js/2.5b254d6a.chunk.js.map": "/static/js/2.5b254d6a.chunk.js.map",
+    "static/js/3.3fa2c2e7.chunk.js": "/static/js/3.3fa2c2e7.chunk.js",
+    "static/js/3.3fa2c2e7.chunk.js.map": "/static/js/3.3fa2c2e7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.170e1184.chunk.css.map": "/static/css/main.170e1184.chunk.css.map",
+    "static/js/2.5b254d6a.chunk.js.LICENSE.txt": "/static/js/2.5b254d6a.chunk.js.LICENSE.txt",
+    "static/media/Education.d2f60b38.png": "/static/media/Education.d2f60b38.png",
+    "static/media/Present with ease.0c705116.png": "/static/media/Present with ease.0c705116.png",
+    "static/media/esewa-logo.5916f61a.png": "/static/media/esewa-logo.5916f61a.png",
+    "static/media/fonepay.8f6dd492.bin": "/static/media/fonepay.8f6dd492.bin",
+    "static/media/js.dee96e6a.png": "/static/media/js.dee96e6a.png",
+    "static/media/loginimg.9b3165a0.webp": "/static/media/loginimg.9b3165a0.webp",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/node.fa03b2ad.png": "/static/media/node.fa03b2ad.png",
+    "static/media/react.09ce83c1.png": "/static/media/react.09ce83c1.png",
+    "static/media/study-after-see.f23f94e6.jpeg": "/static/media/study-after-see.f23f94e6.jpeg",
+    "static/media/teacher.ab225ed2.jpeg": "/static/media/teacher.ab225ed2.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c62c4c17.js",
+    "static/js/2.5b254d6a.chunk.js",
+    "static/css/main.170e1184.chunk.css",
+    "static/js/main.0283ce63.chunk.js"
+  ]
+}
