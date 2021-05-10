@@ -57,7 +57,7 @@ export default function UserChatList(props) {
             .then(function (){
                 setCreatingRoom(false)
                 setOpen(false);
-                history.push('/chat/'+room.id);
+                // history.push('/chat/'+room.id);
             }).catch(function (error){
                // .........................................................TODO
         });

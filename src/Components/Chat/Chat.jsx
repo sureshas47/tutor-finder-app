@@ -54,7 +54,7 @@ export default function Chat() {
     };
 
     const onSendMsg = (e) => {
-        e.preventDefault();
+
         onWriteMsg().finally(function (res) {
             return res;
         }).catch(function (error){
@@ -118,7 +118,11 @@ export default function Chat() {
                                 name="" id="msg" cols="20" rows="3"
                                 value={msg}
                                 onChange={handleChange}
+                                onKeyPress={(e)=>{if(e.key=="Enter"){
+                                    onSendMsg();
+                                }}}
                                 placeholder="send message"
+
                             >
                             </textarea>
                                 <div>

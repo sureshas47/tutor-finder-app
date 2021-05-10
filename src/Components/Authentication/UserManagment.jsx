@@ -10,17 +10,21 @@ export async function registerUserChat(userInfo) {
     })
 }
 //creating chat room #2
-export async function createChatRoom(chatRoom) {
-    await app.firestore().collection("chat-room").add({
-        chat_id:chatRoom.id,
-        chat_name: chatRoom.name,
-        desc: chatRoom.desc,
-        chat_image: chatRoom.image,
-    }).then(function (res) {
+export function createChatRoom(chatRoom) {
+    return new Promise(async function (resolve, reject){
+        await app.firestore().collection("chat-room").add({
+            chat_id:chatRoom.id,
+            chat_name: chatRoom.name,
+            desc: chatRoom.desc,
+            chat_image: chatRoom.image,
+        }).then(function (res) {
+            resolve(res);
 
-    }).catch(function (error) {
-        console.log(error);
+        }).catch(function (error) {
+            reject(error);
+        })
     })
+
 }
 export async function getChatRoomList () {
     // const [roomList, setRoomList] = useState();
