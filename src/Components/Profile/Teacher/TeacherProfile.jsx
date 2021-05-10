@@ -4,7 +4,7 @@ import timg from "../../Images/teacher.jpeg";
 import "./teacherProfile.css";
 import firebase from "firebase";
 import app from "firebase";
-
+import Slide from "react-reveal/Slide";
 
 const TeacherProfile = () => {
     const [address, setAddress] = useState("")
@@ -16,15 +16,6 @@ const TeacherProfile = () => {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [file, setFile] = useState(null);
-
-    //  const onChange= async (e)=>{
-    //      const file=e.target.files[0]
-    //      console.log(file);
-    //      const storageRef=app.storage().ref("images");
-    //      const fileRef=storageRef.child(file.name)
-    //      await fileRef.put(file);
-    //  }
-
 
     const handleTeacherProfile = e => {
         e.preventDefault();
@@ -52,10 +43,13 @@ const TeacherProfile = () => {
     return (
         <>
                 <div className="main-header">
-                    <h1>Searching A New <h2>Teaching Job !</h2></h1>
+                    <Slide top>
+                        <h1>Searching A New <h2>Teaching Job !</h2></h1>
+                    </Slide>
                 </div>
 
                 <div className="header">
+                    <Slide left>
                     <img src={timg} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda cupiditate
                         delectus
@@ -70,10 +64,14 @@ const TeacherProfile = () => {
                         dolor error est et harum id officia, quaerat quasi saepe vitae. Aspernatur assumenda cumque
                         labore
                         odit quos unde? Register your profile to<span> GET STARTED</span></p>
+                    </Slide>
                 </div>
 
                 <div className="teacherProfile">
                     <form className="teacher-Profile" action="" onSubmit={handleTeacherProfile}>
+                        <Slide left>
+
+
                         <input type="text" name="address" id="address" autoComplete="off" value={address}
                                placeholder="enter address" onChange={(e) =>
                             setAddress(e.target.value)} required/>
@@ -110,8 +108,8 @@ const TeacherProfile = () => {
                         <input className="file" type="file" name="profile-pic" id="profile-pic" autoComplete="off"
                                onChange={(e) => setFile(e.target.files[0])}
                                placeholder="choose profile picture" required/>
-
                         <button name="save" type="submit">Save Profile</button>
+                        </Slide>
                     </form>
                 </div>
         </>

@@ -59,7 +59,6 @@ export default function Chat() {
             return res;
         }).catch(function (error){
             console.log(error);
-
         })
         setMsg([]);
     };
@@ -100,7 +99,7 @@ export default function Chat() {
                         <Card className="card">
                             <div>
                                 <h1>welcome <span>{user.email}</span></h1>
-                                <div  >
+                                <div>
                                     {storeMsg.length ?
                                         storeMsg.map((item) =>
                                             <div>
@@ -122,7 +121,6 @@ export default function Chat() {
                                     onSendMsg();
                                 }}}
                                 placeholder="send message"
-
                             >
                             </textarea>
                                 <div>
@@ -133,7 +131,6 @@ export default function Chat() {
                         </Card>
                     </div>
                     </>
-
                 }
             </div>
         </>
