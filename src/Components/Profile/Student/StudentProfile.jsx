@@ -1,12 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {useHistory} from "react-router-dom";
 import stdimg from "../../Images/Education.png";
 import "./studentProfile.css";
-import firebase from "firebase";
 import Bounce from "react-reveal/Bounce";
 import {Avatar, Button, List, ListItem, ListItemAvatar, ListItemText, TextField} from "@material-ui/core";
 import {getData} from "../DataManagement";
-
 
 
 const StudentProfile = () => {
@@ -14,7 +12,6 @@ const StudentProfile = () => {
     const [searchItem, setSearchItem] = useState();
     const [data, setData] = useState();
     const [isLoading, setIsLoading] = useState(true);
-
 
 
     // const [address, setAddress] = useState("")
@@ -36,27 +33,29 @@ const StudentProfile = () => {
         // }).catch(function (error) {
         //     alert("failed to register student ! please try again");
         // });
-
-
     };
 
-    const handleChange = (e) => {
-        if (e.target.name == "search") {
-            setSearchItem(e.target.value);
-        }
-    }
+    //search Course by subject
+    const newData = useMemo(() => {
+        if (!searchItem) return data;
+        return data.filter((res) => {
+            return res.subject.toLocaleLowerCase().includes(searchItem.toLowerCase());
+        });
+
+    }, [searchItem, data]);
     const searchCourse = () => {
 
     }
+
+
 //getting data at first render
     useEffect(() => {
         getData().then(function (res) {
             setData(res);
             setIsLoading(false);
-        }).catch(function (error){
+        }).catch(function (error) {
         })
     }, [true]);
-
 
 
     return (
@@ -72,11 +71,14 @@ const StudentProfile = () => {
                 <Bounce left>
                     <img src={stdimg} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolor fugit magnam nam non
-                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod tempore.
+                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod
+                        tempore.
                         Aliquam quas, voluptatibusconsectetur adipisicing elit. Deserunt dolor fugit magnam nam non
-                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod tempore.
+                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod
+                        tempore.
                         Aliquam quas, voluptatibusconsectetur adipisicing elit. Deserunt dolor fugit magnam nam non
-                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod tempore.
+                        porro qui ullam! Autem, consequuntur delectus eveniet ipsum magnam mollitia neque quod
+                        tempore.
                         Aliquam quas, voluptatibus! Register Your Profile To <span>GET STARTED</span></p>
                 </Bounce>
             </div>
@@ -84,7 +86,7 @@ const StudentProfile = () => {
             <div className="search-bar">
                 <Bounce left>
                     <TextField id="standard-basic" label="Search Courses" name="search" value={searchItem}
-                               onChange={handleChange}/>
+                               onChange={(e) => setSearchItem(e.target.value)}/>
                     <Button className="btnSearch" variant="contained" color="primary"
                             onClick={searchCourse}>Search
                     </Button>
@@ -96,9 +98,9 @@ const StudentProfile = () => {
                 {isLoading ? <p className="main-header">loading courses...</p> :
 
                     <List>
-                        {data.map((item) =>
+                        {newData.map((item) =>
                             <ListItem className="listItem"
-                                      // onClick={() => history.push("/default")}
+                                // onClick={() => history.push("/default")}
                             >
                                 <ListItemAvatar>
                                     <Avatar src={item.photoUrl}>
@@ -108,17 +110,17 @@ const StudentProfile = () => {
                                 <ListItemText className="item" primary={item.subject}
                                               secondary={
                                                   <>
-                                                  <div>{"Rs. "+item.fees+", Exp: "+item.experience+" - yrs."}</div>
-                                                  <div>{"Contact: "+item.phoneNumber}</div>
-                                                  <div>{"Address: "+item.address}</div>
-                                                  <div>{"City: "+item.city+""}</div>
-                                                  <div>{"Qualifications: "+item.qualification}</div>
+                                                      <div>{"Rs. " + item.fees + ", Exp: " + item.experience + " - yrs."}</div>
+                                                      <div>{"Contact: " + item.phoneNumber}</div>
+                                                      <div>{"Address: " + item.address}</div>
+                                                      <div>{"City: " + item.city + ""}</div>
+                                                      <div>{"Qualifications: " + item.qualification}</div>
                                                   </>
                                               }
                                 >
                                 </ListItemText>
 
-                                <Button id="btn-start-chat" onClick={()=>history.push("/chat-app")}>
+                                <Button id="btn-start-chat" onClick={() => history.push("/chat-app")}>
                                     Start Chat
                                 </Button>
                             </ListItem>
