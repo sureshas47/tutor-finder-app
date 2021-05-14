@@ -56,3 +56,37 @@
 }
 
 
+@media (max-width: 1111px) {
+    .header {
+        align-items: center;
+    } .header h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 990px) {
+    .header h1 {
+        font-size: 22px;
+    }
+}@media (max-width: 768px) {
+    .header h1 {
+        margin-left: 1%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .header {
+        display: flex;
+        flex-direction:column ;
+        margin-bottom: 20px;
+    }
+
+    .header h1{
+        font-size: 18px;
+        margin-top: 20px;
+        text-align: center;
+        margin-left: 1%;
+    }
+}
+
+
+
