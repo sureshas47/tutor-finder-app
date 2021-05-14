@@ -40,16 +40,15 @@ const Default = () => {
                     </Fade>
                     <div className="payments-online">
                         <Zoom>
-                                <div className="payEsewa">
-                                    <img src={esewa} alt=""/>
-                                    <input type="submit" className={'btn btn-lg btn-primary'} value="Pay With Esewa"
-                                           onClick={() => history.push("/pay")}/>
-                                </div>
+                            <div className="payEsewa">
+                                <img src={esewa} alt=""/>
+                                <input type="submit" className={'btn btn-lg btn-primary'} value="Pay With Esewa"
+                                       onClick={() => history.push("/pay")}/>
+                            </div>
                             <div className="payPhonepay">
                                 <img src={phonepay} alt=""/>
                                 <input type="submit" className={'btn btn-lg btn-primary'} value="Pay With Fone-Pay"/>
                             </div>
-
                         </Zoom>
                     </div>
                     <div className="btnPayment-method">

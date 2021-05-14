@@ -53,23 +53,20 @@
     width: auto;
 
 }
-.pay{
-background-color: floralwhite;
-}
+
 .payments-online img {
     width: 400px;
     height: 300px;
-    margin-left: 8%;
+    margin-left: 20%;
     display:block;
 }
 
 .payments-online {
     display: grid;
     grid-template-columns: auto auto;
-
 }
 .payments-online input{
-    margin-left: 23%;
+    margin-left: 35%;
 }
 
 /*media query*/
@@ -89,11 +86,11 @@ background-color: floralwhite;
         width: 55%;
     }
     .payments-online img {
-        width: 350px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
     }
     .payments-online input{
-        margin-left: 28%;
+        margin-left: 35%;
         font-size: 16px;
     }
 
