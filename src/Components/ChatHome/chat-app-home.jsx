@@ -16,7 +16,7 @@ export default function ChatAppHome() {
 
         //checking users
         app.auth().onAuthStateChanged((user) => {
-            console.log(user);
+            // console.log(user);
             if(user) {
                 let user_obj = [];
                 user_obj.id = user.uid;

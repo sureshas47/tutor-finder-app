@@ -20,11 +20,8 @@ import {createChatRoom, getChatRoomList} from "../Authentication/UserManagment";
 
 export default function UserChatList(props) {
 
-    const history = useHistory();
-
     // const [userList, setUserList] = useState();
     const [chatRoomList, setChatRoomList] = useState();
-
     const [isLoading, setIsLoading] = useState(true);
     const [open, setOpen] = useState(false);
     const [creatingRoom, setCreatingRoom] = useState(false);
@@ -32,7 +29,7 @@ export default function UserChatList(props) {
     const [roomDesc, setRoomDesc] = useState();
     const [roomImage, setRoomImage] = useState();
 
-
+    const history = useHistory();
 
     const handleClose = () => {
         setOpen(false);
@@ -52,7 +49,7 @@ export default function UserChatList(props) {
         room.name=roomName;
         room.desc=roomDesc;
         room.image=roomImage;
-        console.log(room);
+        // console.log(room);
         createChatRoom(room)
             .then(function (){
                 setCreatingRoom(false)
@@ -73,6 +70,7 @@ export default function UserChatList(props) {
             setChatRoomList(res);
             setIsLoading(false);
         })
+
     }, [true]);
 
 
@@ -89,7 +87,7 @@ export default function UserChatList(props) {
                     <h2>
                         <List>
                             {chatRoomList.map((item) =>
-                                <ListItem className="listItem" onClick={() => history.push("/chat/" + '_' + item.chat_id,{room:item})}>
+                                <ListItem className="listItem" onClick={() => history.push("/chat/"+'_'+item.chat_id,{room:item})}>
                                     <ListItemAvatar>
                                         <Avatar src={item.chat_image}>
                                         </Avatar>
@@ -98,7 +96,6 @@ export default function UserChatList(props) {
                                     </ListItemText>
                                 </ListItem>
                             )}
-
                         </List>
                     </h2>
                 </Card>
@@ -138,7 +135,6 @@ export default function UserChatList(props) {
                         type="text"
                         value={roomImage}
                         fullWidth
-
                 />
                 </DialogContent>}
                 {creatingRoom ?'':

@@ -16,6 +16,7 @@
     padding-left: 5%;
     line-height: 2;
     font-family: 'Inconsolata', monospace;
+    text-align: center;
 }
 .header img{
     border-radius: 50%;

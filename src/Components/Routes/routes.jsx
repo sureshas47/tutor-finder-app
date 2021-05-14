@@ -19,8 +19,9 @@ const Routes = () => {
         <Navbar/>
             <Switch>
 
-                <Route exact path="/" component={LoginForm}/>
+                <Route exact path="/" component={Default}/>
                 <Route path="/signup" component={SignupForm}/>
+                <Route path="/login" component={LoginForm}/>
                 <Route path="/userlist" component={UserProfileList}/>
                 <Route path="/student-profile" component={StudentProfile}/>
                 <Route path="/teacher-profile" component={TeacherProfile}/>

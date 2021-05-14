@@ -1,5 +1,18 @@
 *{margin: 0; padding:0;}
+.header{
+    grid-template-columns: auto auto;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    color: #6d6d6d;
+    font-family: 'Inconsolata', monospace;
+    align-items: center;
+    text-align: center;
 
+}
+.header h1{
+  margin-left: -80%;
+}
 .login-area{
   border: 1q solid #232121;
     align-items: center;
@@ -42,7 +55,4 @@
     width: 100px;
 }
 
-.header{
-    align-items: center;
-}
 

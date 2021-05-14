@@ -39,7 +39,7 @@ const SignupForm = () => {
                 userType: userType
             }).then(function (response) {
                 alert("register successful");
-                history.push("/");
+                history.push("/login");
             }).catch(function (error) {
                 alert("failed to register ! please try again");
             });
@@ -52,7 +52,7 @@ const SignupForm = () => {
 
     return (
         <>
-            <div className="header">
+            <div className="header2">
                 <img src={img} alt=""/>
                 <h1>Tutor Finder User Registration Area</h1>
             </div>
@@ -83,7 +83,7 @@ const SignupForm = () => {
 
                     <button name="signup" type="submit">Sign Up My Account</button>
 
-                    <Link to="/">already an account? Login</Link>
+                    <Link to="login">already an account? Login</Link>
                 </form>
 
             </div>

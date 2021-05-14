@@ -15,7 +15,9 @@ const TeacherProfile = () => {
     const [fees, setFees] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    const [file, setFile] = useState(null);
+    const [photoUrl, setPhotoUrl] = useState();
+    // const [file, setFile] = useState(null);
+
 
     const handleTeacherProfile = e => {
         e.preventDefault();
@@ -29,27 +31,28 @@ const TeacherProfile = () => {
             fees: fees,
             subject: subject,
             message: message,
+            photoUrl: photoUrl
         }).then(function (response) {
             alert("teacher register successful");
         }).catch(function (error) {
             alert("failed to register ! please try again");
         });
         //uploading image to firebase
-        const storageRef = app.storage().ref("images");
-        const fileRef = storageRef.child(file.name).put(file);
+        // const storageRef = app.storage().ref("images");
+        // const fileRef = storageRef.child(file.name).put(file);
         // fileRef.put(file);
     };
 
     return (
         <>
-                <div className="main-header">
-                    <Slide top>
-                        <h1>Searching A New <h2>Teaching Job !</h2></h1>
-                    </Slide>
-                </div>
+            <div className="main-header">
+                <Slide top>
+                    <h1>Searching A New <h2>Teaching Job !</h2></h1>
+                </Slide>
+            </div>
 
-                <div className="header">
-                    <Slide left>
+            <div className="header">
+                <Slide left>
                     <img src={timg} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda cupiditate
                         delectus
@@ -64,12 +67,12 @@ const TeacherProfile = () => {
                         dolor error est et harum id officia, quaerat quasi saepe vitae. Aspernatur assumenda cumque
                         labore
                         odit quos unde? Register your profile to<span> GET STARTED</span></p>
-                    </Slide>
-                </div>
+                </Slide>
+            </div>
 
-                <div className="teacherProfile">
-                    <form className="teacher-Profile" action="" onSubmit={handleTeacherProfile}>
-                        <Slide left>
+            <div className="teacherProfile">
+                <form className="teacher-Profile" action="" onSubmit={handleTeacherProfile}>
+                    <Slide left>
 
 
                         <input type="text" name="address" id="address" autoComplete="off" value={address}
@@ -101,17 +104,25 @@ const TeacherProfile = () => {
                                onChange={(e) => setSubject(e.target.value)}
                                placeholder="enter subject" required/>
 
-                        <input type="text" name="message" id="message" autoComplete="off" value={message}
-                               onChange={(e) => setMessage(e.target.value)}
-                               placeholder="enter message" required/>
+                        {/*<input type="text" name="message" id="message" autoComplete="off" value={message}*/}
+                        {/*       onChange={(e) => setMessage(e.target.value)}*/}
+                        {/*       placeholder="enter message" required/>*/}
 
-                        <input className="file" type="file" name="profile-pic" id="profile-pic" autoComplete="off"
-                               onChange={(e) => setFile(e.target.files[0])}
-                               placeholder="choose profile picture" required/>
+                        <input type="text" name="photoUrl" id="photoUrl" autoComplete="off" value={photoUrl}
+                               onChange={(e) => setPhotoUrl(e.target.value)}
+                               placeholder="enter course link" required/>
+                        <textarea placeholder="enter message" style={{marginBottom:"10px"}} name="message" id="message" cols="30" rows="5" required autoComplete="off"
+                                  value={message} onChange={(e)=>setMessage(e.target.value)}>
+                            </textarea>
+
+                        {/*<input className="file" type="file" name="profile-pic" id="profile-pic" autoComplete="off"*/}
+                        {/*       onChange={(e) => setFile(e.target.files[0])}*/}
+                        {/*       placeholder="choose profile picture" required/>*/}
+
                         <button name="save" type="submit">Save Profile</button>
-                        </Slide>
-                    </form>
-                </div>
+                    </Slide>
+                </form>
+            </div>
         </>
     )
 }

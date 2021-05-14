@@ -19,16 +19,13 @@
 
 /*....................*/
 .header {
-    margin-top: 15px;
     justify-content: space-evenly;
-
 }
 
 #images img {
     width: 200px;
     height: 200px;
     margin: 10px 10px 20px 10px;
-    /*box-sizing: border-box;*/
 }
 
 #title {
@@ -39,67 +36,117 @@
     margin-left: 3%;
     text-align: center;
     line-height: 2;
-
+}
+.languages{
+    background-color: #eceaea;
+}
+.programming{
+    background-color: #eceaea;
 }
 
 .academic-course img {
-    margin-left: 30%;
     margin-top: 15px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
     margin-bottom: 15px;
-}
+    width: auto;
 
-.payment img {
-    width: 450px;
+}
+.pay{
+background-color: floralwhite;
+}
+.payments-online img {
+    width: 400px;
     height: 300px;
+    margin-left: 8%;
+    display:block;
 }
 
 .payments-online {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-    background-color: floralwhite;
-}
+    display: grid;
+    grid-template-columns: auto auto;
 
-.payment-method {
-    background-color: floralwhite;
-    max-width: 100%;
-    display: flex;
-    padding-bottom: 15px;
-    justify-content: space-around;
+}
+.payments-online input{
+    margin-left: 23%;
 }
 
 /*media query*/
 @media (max-width: 990px) {
-    #viewwork h1 {
-        padding-top: 60%;
+    #images img {
+        width: 150px;
+        height: 150px;
     }
 
-    #myWork {
-        top: 160%;
-        grid-template-columns: auto auto;
-        justify-content: space-around;
+    .main-header {
+       font-size: 30px;
     }
-
 }
 
 @media (max-width: 850px) {
-    #viewwork h1 {
-        padding-top: 90%;
+    .academic-course img{
+        width: 55%;
+    }
+    .payments-online img {
+        width: 350px;
+        height: 250px;
+    }
+    .payments-online input{
+        margin-left: 28%;
+        font-size: 16px;
     }
 
-    #myWork {
-        top: 190%;
-    }
 }
 
 @media (max-width: 768px) {
-    #viewwork h1 {
-        padding-top: 100%;
+    .main-header {
+        font-size: 22px;
+    }
+   .header{
+       grid-template-columns: none;
+       display: block;
+       margin-bottom: 60px;
+   }
+    #title {
+        height: 150px;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
     }
 
-    #myWork {
-        top: 200%;
-        grid-template-columns: auto;
+    #images img {
+        width: 250px;
+        height: 250px;
+    }
+    .academic-course img{
+        width: 40%;
+    }
+    .payments-online img {
+        width: 250px;
+        height: 180px;
+
+    }
+    .payments-online input{
+        font-size: 12px;
+        text-align: center;
+    }
+
+}
+@media (max-width: 576px) {
+
+    .payments-online img {
+        width: 250px;
+        height: 150px;
+    }
+    .payments-online {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10%;
+
     }
 }
 

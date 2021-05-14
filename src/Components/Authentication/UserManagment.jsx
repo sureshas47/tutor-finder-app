@@ -1,6 +1,5 @@
 import app from "./Login/FirebaseAuth";
-import {logDOM} from "@testing-library/react";
-import {useState} from "react";
+//store email and password to firestore
 export async function registerUserChat(userInfo) {
     await app.firestore().collection("userManagement").add({
         email: userInfo.email,
@@ -26,6 +25,8 @@ export function createChatRoom(chatRoom) {
     })
 
 }
+
+//list out chatroom-list
 export async function getChatRoomList () {
     // const [roomList, setRoomList] = useState();
         const snapshot = await app.firestore().collection('chat-room').get();

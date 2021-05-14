@@ -25,11 +25,13 @@ const LoginForm = () => {
         setAllEntry(...allEntry, [newEntry])
         app.auth().signInWithEmailAndPassword(email, password).then((res) => {
             alert("successful login from: " + email);
-            // window.location = "./Default";
+            // console.log(res);
+            //storing user's email and uid after login
             register(res.user);
         }).catch((error) => {
             alert("failed", error);
         })
+
     };
 
     return (
@@ -56,18 +58,7 @@ const LoginForm = () => {
                         <Link to="signup">Signup</Link>
 
                 </form>
-                <div>
-                    {/*{*/}
-                    {/*    allEntry.map((curVal) => {*/}
-                    {/*        return (*/}
-                    {/*            <div className="show-email">*/}
-                    {/*                <p>{curVal.email}</p>*/}
-                    {/*            </div>*/}
-                    {/*        )*/}
-                    {/*    })*/}
-                    {/*}*/}
 
-                </div>
             </div>
         </>
     )
