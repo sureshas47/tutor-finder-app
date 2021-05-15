@@ -16,6 +16,7 @@ import {useHistory} from "react-router-dom";
 
 import app from "../Authentication/Login/FirebaseAuth";
 import {createChatRoom, getChatRoomList} from "../Authentication/UserManagment";
+import Chat from "../Chat/Chat";
 
 
 export default function UserChatList(props) {
@@ -28,6 +29,7 @@ export default function UserChatList(props) {
     const [roomName, setRoomName] = useState();
     const [roomDesc, setRoomDesc] = useState();
     const [roomImage, setRoomImage] = useState();
+    const [room, setRoom] = useState();
 
     const history = useHistory();
 
@@ -87,7 +89,7 @@ export default function UserChatList(props) {
                     <h2>
                         <List>
                             {chatRoomList.map((item) =>
-                                <ListItem className="listItem" onClick={() => history.push("/chat/"+'_'+item.chat_id,{room:item})}>
+                                <ListItem className="listItem" onClick={() => history.push("/chat/"+'_'+item.chat_id, {room:item})}>
                                     <ListItemAvatar>
                                         <Avatar src={item.chat_image}>
                                         </Avatar>
@@ -147,6 +149,7 @@ export default function UserChatList(props) {
                     </Button>
                 </DialogActions>}
             </Dialog>
+
         </div>
     )
 }

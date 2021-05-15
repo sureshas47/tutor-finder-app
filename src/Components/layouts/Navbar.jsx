@@ -2,6 +2,15 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const Navbar = () => {
+   const onNavbar=()=>{
+           const nav = document.getElementById("navbar");
+           if (nav.id === "navbar") {
+               nav.id += " responsive";
+           } else {
+               nav.id = "navbar";
+           }
+   }
+
     return (
         <div style={{width:"100%"}}>
             <nav className="navbar navbar-expand-lg navbar-light bg-primary" >
@@ -9,7 +18,7 @@ const Navbar = () => {
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span id="navbar" className="navbar-toggler-icon" onClick={onNavbar}></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent" >

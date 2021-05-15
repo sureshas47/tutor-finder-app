@@ -26,6 +26,7 @@ export default function Chat() {
         });
         getMsg();
         setRoomInfo(history.location.state.room);
+
     }, [true]);
 
     const handleChange = (e) => {
@@ -50,11 +51,8 @@ export default function Chat() {
     };
 
     const onSendMsg = (e) => {
-
         onWriteMsg().finally(function (res) {
         }).catch(function (error) {
-            // console.log(error);
-
         })
         setMsg([]);
     };

@@ -23,7 +23,6 @@ export default function ChatAppHome() {
                 user_obj.email = user.email;
                 setUser(user_obj);
                 setIsLogin(true);
-                console.log(user_obj);
             }
             setGettingUser(false);
         });
@@ -33,7 +32,6 @@ export default function ChatAppHome() {
 
     return(
         <>
-
             <div className="main-header">
                 {gettingUser ?
                 <p>please wait...</p>:

@@ -2,18 +2,43 @@
     padding: 0;
     margin: 0;
 }
+.s-main-header{
+    color: #047f7f;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    padding-top: 10px;
+}
 
-.student-profile {
-    align-items: center;
+.s-header {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 0 20px 0 20px;
 }
 
-.student-profile input {
-    margin-bottom: 10px;
+.s-header img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
 }
+
+.s-header p {
+    padding-left: 5%;
+    line-height: 2;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*.student-profile {*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin-bottom: 10px;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+/*.student-profile input {*/
+/*    margin-bottom: 10px;*/
+/*}*/
 
 .student-profile button {
     font-size: 18px;
@@ -29,20 +54,31 @@
 }
 
 .search-bar {
-    text-align: center;
     display: flex;
+    margin-right: 40%;
     margin-left: 40%;
-    align-items: center;
-
 }
 
-.item {
-    font-weight: bolder;
+.search {
+    width: 200%;
+}
+
+.search label {
+    color: #d95b30;
+    font-size: 14px;
+    font-style: italic;
+
+}
+.card-1{
+    color: #d95b30;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: block;
 }
 
 .listItem {
     margin-bottom: 20px;
-    background-color: #efeded;
+background: linear-gradient(to bottom, #aff3f3 0%, #ffffff 100%)
 }
 
 #btn-start-chat {
@@ -50,11 +86,12 @@
     color: whitesmoke;
 }
 
+
 @media (max-width: 768px) {
-    .header p {
-        margin-right: 30px;
-        margin-top: 15px;
-        font-size: 15px;
+    .s-header {
+        display: block;
+        text-align: center;
+        margin-right: 40px;
     }
 
     .search-bar {

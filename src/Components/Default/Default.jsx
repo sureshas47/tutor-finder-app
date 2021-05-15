@@ -14,10 +14,11 @@ const Default = () => {
     return (
         <>
             <div>
+
                 <div className="languages">
                     <Fade bottom>
                         <h1 className="main-header">
-                            LEARN 50+ PROGRAMMING LANGUAGES !
+                            LEARN 51+ PROGRAMMING LANGUAGES !
                         </h1>
                     </Fade>
                     <div className="programming">

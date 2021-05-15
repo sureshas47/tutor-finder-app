@@ -45,13 +45,14 @@ const TeacherProfile = () => {
 
     return (
         <>
+            <div style={{background:"linear-gradient(to bottom, #33ccff 0%, #ffffff 100%)"}}>
             <div className="main-header">
                 <Slide top>
                     <h1>Searching A New <h2>Teaching Job !</h2></h1>
                 </Slide>
             </div>
 
-            <div className="header">
+            <div className="t-header">
                 <Slide left>
                     <img src={timg} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda cupiditate
@@ -122,6 +123,7 @@ const TeacherProfile = () => {
                         <button name="save" type="submit">Save Profile</button>
                     </Slide>
                 </form>
+            </div>
             </div>
         </>
     )

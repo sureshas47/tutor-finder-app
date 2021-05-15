@@ -60,14 +60,14 @@ const StudentProfile = () => {
 
     return (
         <>
-            <div className="main-header">
+            <div style={{background:"linear-gradient(to bottom, #33ccff 0%, #ffffff 100%)"}}>
+            <div className="s-main-header">
                 <Bounce top>
-                    <h1>Searching A Teacher ?
-                    </h1>
+                    <h1>Search A Teacher</h1>
                 </Bounce>
             </div>
 
-            <div className="header">
+            <div className="s-header">
                 <Bounce left>
                     <img src={stdimg} alt=""/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolor fugit magnam nam non
@@ -85,16 +85,16 @@ const StudentProfile = () => {
 
             <div className="search-bar">
                 <Bounce left>
-                    <TextField id="standard-basic" label="Search Courses" name="search" value={searchItem}
+                    <TextField className="search" id="standard-basic" label="Search Courses" name="search" value={searchItem}
                                onChange={(e) => setSearchItem(e.target.value)}/>
-                    <Button className="btnSearch" variant="contained" color="primary"
-                            onClick={searchCourse}>Search
-                    </Button>
+                    {/*<Button className="btnSearch" variant="contained" color="primary"*/}
+                    {/*        onClick={searchCourse}>Search*/}
+                    {/*</Button>*/}
                 </Bounce>
             </div>
 
             {/*showing data to students*/}
-            <div className="card">
+            <div className="card-1">
                 {isLoading ? <p className="main-header">loading courses...</p> :
 
                     <List>
@@ -127,6 +127,7 @@ const StudentProfile = () => {
                         )}
                     </List>
                 }
+            </div>
             </div>
 
 

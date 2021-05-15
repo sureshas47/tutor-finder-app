@@ -12,18 +12,23 @@
 .main-header h2{
     color: #d95b30;
 }
-.header p{
+.t-header{
+    display: flex;
+    margin: 0 20px 0 20px;
+}
+.t-header p{
     padding-left: 5%;
     line-height: 2;
     font-family: 'Inconsolata', monospace;
     text-align: center;
+    margin-top: 15px;
 }
-.header img{
+.t-header img{
     border-radius: 50%;
     height: 200px;
     width: 200px;
 }
-.header span{
+.t-header span{
     color: #047f7f;
 }
 
@@ -34,8 +39,45 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/*.input-fields {*/
+/*    position: relative;*/
+/*    font-size: 1.5em;*/
+/*    background: linear-gradient(21deg, #10abff, #1beabd);*/
+/*    padding: 3px;*/
+/*    display: inline-block;*/
+/*    border-radius: 9999em;*/
+/*}*/
+/*   *:not(span) {*/
+/*       position: relative;*/
+/*       display: inherit;*/
+/*       border-radius: inherit;*/
+/*       margin: 0;*/
+/*       border: none;*/
+/*       outline: none;*/
+/*       padding: 0 .325em;*/
+/*       z-index: 1;*/
+/*		:focus + span {*/
+/*       opacity: 1;*/
+/*       transform: scale(1);*/
+/*   }*/
+
 .teacher-Profile input{
     margin-bottom: 10px;
+    border:none;
+    border-bottom: 1px solid dodgerblue;
+}
+::-webkit-input-placeholder {
+    color: #d95b30;
+    font-size: 14px;
+    text-align: center;
+}
+.teacher-Profile textarea{
+    margin-bottom: 10px;
+    border:none;
+    border-bottom:1px solid dodgerblue;
+
+
+
 }
 .teacher-Profile .file{
     font-size: 12px;
@@ -52,4 +94,12 @@
 }
 .teacher-Profile button:hover{
     background-color: #1E90FFFF;
+}
+@media (max-width: 768px) {
+    .t-header{
+        display: block;
+        text-align: center;
+        margin-right: 40px;
+    }
+
 }

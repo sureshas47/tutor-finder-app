@@ -1,9 +1,6 @@
     import React from "react";
     import firebase from "firebase";
     import "firebase/storage";
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 
     const firebaseConfig = {
         apiKey: "AIzaSyAS1X6PvWf9nhy_ulEXI7wB7J3ap6CpX0g",
@@ -16,9 +13,5 @@
 
     };
 
-    // Initialize Firebase
-    // const fireAuth = firebase.initializeApp(firebaseConfig);
     const app=firebase.initializeApp(firebaseConfig);
-    // const storage=firebase.storage();
-    // export { storage, firebase as default};
     export default app;
