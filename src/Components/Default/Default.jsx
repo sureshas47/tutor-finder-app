@@ -14,7 +14,6 @@ const Default = () => {
     return (
         <>
             <div>
-
                 <div className="languages">
                     <Fade bottom>
                         <h1 className="main-header">

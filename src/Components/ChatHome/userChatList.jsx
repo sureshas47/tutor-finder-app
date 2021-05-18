@@ -89,7 +89,7 @@ export default function UserChatList(props) {
                     <h2>
                         <List>
                             {chatRoomList.map((item) =>
-                                <ListItem className="listItem" onClick={() => history.push("/chat/"+'_'+item.chat_id, {room:item})}>
+                                <ListItem className="listItem" onClick={() => history.push("/chat/_"+item.chat_id, {room:[item]})}>
                                     <ListItemAvatar>
                                         <Avatar src={item.chat_image}>
                                         </Avatar>

@@ -15,6 +15,12 @@ height: 300px;
 .card .btn-login{
     margin-left: 20px;
 }
+.card .btnLogout{
+    margin-left: 50%;
+    display: block;
+    background-color: #3094f6;
+    color: #e59031;
+}
 .card h1{
     color: red;
 

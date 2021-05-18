@@ -15,7 +15,7 @@ const LoginForm = () => {
 
     const register=(userInfo)=>{
         registerUserChat(userInfo).then(function (res){
-            history.push("/chat-app");
+
         })
     }
     //login
@@ -23,11 +23,14 @@ const LoginForm = () => {
         event.preventDefault();
         const newEntry = {email: email, password: password}
         setAllEntry(...allEntry, [newEntry])
+
+
         app.auth().signInWithEmailAndPassword(email, password).then((res) => {
-            alert("successful login from: " + email);
+            alert("successful login from: " +email);
             // console.log(res);
             //storing user's email and uid after login
             register(res.user);
+            history.push("/chat-app");
         }).catch((error) => {
             alert("failed", error);
         })

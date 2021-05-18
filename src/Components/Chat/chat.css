@@ -26,7 +26,6 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
-    opacity: 85%;
     font-size: 18px;
     font-family: 'Inconsolata', monospace;
     font-style: oblique;
@@ -46,19 +45,15 @@
     font-style: oblique;
     font-size: 18px;
     font-family: 'Inconsolata', monospace;
-    opacity: 85%;
     font-weight: bold;
 }
 .my-msg-time{
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
-    opacity: 40%;
     color: #6d6d6d;
     margin-top: -10px;
     margin-left: 5px;
-
-
 
 }
 .others-msg-time{

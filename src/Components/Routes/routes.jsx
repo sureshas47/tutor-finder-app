@@ -5,7 +5,7 @@ import SignupForm from "../Authentication/Signup/Signup";
 import UserProfileList from "../Authentication/Signup/UserProfileList";
 import StudentProfile from "../Profile/Student/StudentProfile";
 import TeacherProfile from "../Profile/Teacher/TeacherProfile";
-import Navbar from "../layouts/Navbar";
+import Navmenu from "../layouts/Navbar";
 import Default from "../Default/Default";
 import Footer from "../layouts/Footer";
 import Success from "../Default/PaymentStatus/Success";
@@ -16,7 +16,7 @@ import payment from "../Default/Payment/Payment";
 const Routes = () => {
     return (
        <div>
-        <Navbar/>
+        <Navmenu/>
             <Switch>
 
                 <Route exact path="/" component={Default}/>
@@ -31,7 +31,6 @@ const Routes = () => {
                 <Route exact path="/chat/:chatId" component={Chat}/>
                 <Route path="/chat-app" component={ChatAppHome}/>
                 <Route path="/pay" component={payment}/>
-
 
             </Switch>
            <Footer/>

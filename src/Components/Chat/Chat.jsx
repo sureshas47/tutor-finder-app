@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import app from "../Authentication/Login/FirebaseAuth";
-import {Avatar, Card, CardHeader, CircularProgress} from "@material-ui/core";
+import {Avatar, Button, Card, CardHeader, CircularProgress} from "@material-ui/core";
 import {useParams, useHistory} from "react-router-dom";
 import './chat.css';
 
@@ -121,8 +121,9 @@ export default function Chat() {
                             >
                             </textarea>
                                     <div>
-                                        <button type="submit">Send
-                                        </button>
+
+                                        <Button variant="contained" color="secondary" type="submit">Send
+                                        </Button>
                                     </div>
                                 </form>
                             </Card>
